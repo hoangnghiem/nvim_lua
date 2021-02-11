@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 vim.o.ruler = false
 vim.o.splitright = true
 vim.o.splitbelow = true
@@ -38,6 +40,10 @@ vim.o.listchars = 'tab:┆·,trail:·,precedes:,extends:'
 
 vim.g.clipboard='unnamedplus'
 
+vim.g.material_theme_style = 'palenight'
+vim.g.material_terminal_italics = 1
+vim.cmd('colo material')
+
 -- trim trailing space
 local autocmds = {
   vimrc = {
@@ -45,3 +51,4 @@ local autocmds = {
   };
 }
 nvim_create_augroups(autocmds)
+

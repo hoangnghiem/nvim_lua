@@ -23,17 +23,35 @@ if not string.find(package.cpath, install_cpath_pattern, 1, true) then
 end
 
 local function try_loadstring(s, component, name)
-  local success, err = pcall(loadstring(s))
+  local success, result = pcall(loadstring(s))
   if not success then
     print('Error running ' .. component .. ' for ' .. name)
-    error(err)
+    error(result)
   end
+  return result
 end
 
 _G.packer_plugins = {
+  ["BufOnly.vim"] = {
+    loaded = true,
+    path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/BufOnly.vim"
+  },
+  ["astronauta.nvim"] = {
+    loaded = true,
+    path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/astronauta.nvim"
+  },
   ["galaxyline.nvim"] = {
+    config = { "\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20conf.statusline\frequire\0" },
     loaded = true,
     path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+  },
+  ["material.vim"] = {
+    loaded = true,
+    path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/material.vim"
+  },
+  ["nvim-bufferline.lua"] = {
+    loaded = false,
+    path = "/Users/hoang/.local/share/nvim/site/pack/packer/opt/nvim-bufferline.lua"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -51,16 +69,34 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/startuptime.vim"
   },
+  ["vim-bufkill"] = {
+    loaded = true,
+    path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/vim-bufkill"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/vim-commentary"
   },
-  ["vim-gruvbox8"] = {
+  ["vim-expand-region"] = {
     loaded = true,
-    path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/vim-gruvbox8"
+    path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/vim-expand-region"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/vim-surround"
+  },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/vim-visual-multi"
+  },
+  winresizer = {
+    loaded = true,
+    path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/winresizer"
   }
 }
 
+-- Config for: galaxyline.nvim
+try_loadstring("\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20conf.statusline\frequire\0", "config", "galaxyline.nvim")
 END
 
 catch
