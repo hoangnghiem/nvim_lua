@@ -81,9 +81,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/vim-expand-region"
   },
+  ["vim-matchit"] = {
+    loaded = true,
+    path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/vim-matchit"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/vim-surround"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/Users/hoang/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
   },
   ["vim-visual-multi"] = {
     loaded = true,

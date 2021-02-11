@@ -29,10 +29,12 @@ return require('packer').startup(
         config = function() require 'conf.statusline' end,
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
-    use 'qpkorr/vim-bufkill'
-    use 'vim-scripts/BufOnly.vim'
-    use 'tpope/vim-surround'
-    use 'terryma/vim-expand-region'
-    use 'mg979/vim-visual-multi'
+    use { 'qpkorr/vim-bufkill' }
+    use { 'vim-scripts/BufOnly.vim' }
+    use { 'tpope/vim-surround' }
+    use { 'terryma/vim-expand-region' }
+    use { 'mg979/vim-visual-multi' }
+    use {'christoomey/vim-tmux-navigator'}
+    use {'https://github.com/adelarsq/vim-matchit'}
   end
 )
